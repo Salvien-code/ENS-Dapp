@@ -1,8 +1,9 @@
 import Head from "next/head";
+import Image from "next/image";
 import styles from "@/styles/Home.module.css";
 import Web3Modal from "web3modal";
 import { useEffect, useRef, useState } from "react";
-import { ethers, providers } from "ethers";
+import { providers } from "ethers";
 
 export default function Home() {
   const web3ModalRef = useRef();
@@ -90,6 +91,15 @@ export default function Home() {
             It is an NFT collection for Simon Punks.
           </div>
           {renderButton()}
+        </div>
+        <div>
+          <Image
+            className={styles.image}
+            width="500"
+            height="400"
+            src="/learnweb3punks.png"
+            alt="Simon Punks"
+          />
         </div>
       </main>
 
